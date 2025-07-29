@@ -1,0 +1,39 @@
+@use "../utils" as u;
+
+.contact {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+
+    .contact__title {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .contact__image {
+        width: 80%;
+        margin: auto;
+    }
+
+    // Tablet styles
+    @include u.tablet-only {
+        padding-top: 50px;
+
+        .contact__image {
+            width: 400px;
+        }
+    }
+
+    // Desktop styles
+    @include u.desktop-only {
+        .contact__title {
+            font-size: 2.7rem;
+        }
+
+        .contact__image {
+            width: 550px;
+        }
+    }
+}

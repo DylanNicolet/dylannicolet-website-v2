@@ -1,0 +1,82 @@
+@use "../utils" as u;
+
+.about-me {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+
+    .about-me__title {
+        width: auto;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    .about-me__container {
+        .about-me__image-container {
+            background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.879) 98%), url("../assets/images/binary-background.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 80%;
+            margin: auto;
+            border-radius: 40%;
+
+            .about-me__planet-image {
+                width: 100%;
+                margin: auto;
+                animation: planet-bounce 5s ease-in-out infinite;
+            }
+        }
+
+        .about-me__text {
+            width: 80%;
+            margin: 40px auto;
+            text-align: left;
+        }
+    }
+
+    @include u.tablet-only {
+        .about-me__title {
+            margin: 0 auto 30px auto;
+        }
+
+        .about-me__container {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 90%;
+            margin: auto;
+
+            .about-me__image-container {
+                width: 45%;
+            }
+
+            .about-me__text {
+                width: 45%;
+                margin: 0 auto auto auto;
+            }
+        }
+    }
+
+    @include u.desktop-only {
+        padding-top: 50px;
+
+        .about-me__title {
+            font-size: 3rem;
+        }
+
+        .about-me__container {
+            max-width: 1400px;
+
+            .about-me__image-container {
+                margin-top: 0;
+            }
+
+            .about-me__text {
+                margin: 0 auto 100px auto;
+                width: 30%;
+                align-self: flex-end;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

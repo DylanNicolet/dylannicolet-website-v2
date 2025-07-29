@@ -1,0 +1,300 @@
+@use "../utils" as u;
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
+.hero {
+    background-image: linear-gradient(transparent, u.$color-background 98%), url("/src/assets/images/hero-bg-mobile.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 45px;
+    position: relative;
+    overflow-x: hidden;
+
+    header {
+        z-index: 3;
+        width: 100%;
+
+        .hero__title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 300;
+            font-family: 'Babylonica', "cursive";
+
+            p {
+                margin: 0;
+            }
+            
+            .hero__title {
+                font-size: 3rem;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+
+        .contact__button-container {
+            margin-top: 1rem;
+        }
+    }
+
+    .hero__text {
+        width: 300px;
+        text-align: center;
+        font-size: 1.3rem;
+        transform: translateY(-55px);
+    }
+
+    .hero__tech-icon-container {
+        overflow: hidden;
+        width: 100%;
+        z-index: 3;
+
+        .tech-ticker {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+
+            .tech-track {
+                display: flex;
+                width: max-content;
+                animation: swiper-scroll-left 25s linear infinite;
+            }
+
+            .tech-slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                width: max-content;
+                padding: 0 15px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                }
+
+                p {
+                    text-align: center;
+                    margin-top: 0.5rem;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+
+    .hero__stars-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+
+        .hero__star {
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
+                        0 0 0 6px rgba(255,255,255,0.1),
+                        0 0 15px rgba(255,255,255,1);
+            animation: animate-stars 5s linear infinite;
+            opacity: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 150px;
+                height: 1px;
+                background: linear-gradient(90deg, white, transparent);
+            }
+
+            &:nth-child(1) {
+                top: 0px;
+                right: 150px;
+                left: initial;
+                animation-delay: 1s;
+                animation-duration: 5s;
+                width: 5px;
+                height: 5px;
+            }
+
+            &:nth-child(2) {
+                top: 300px;
+                right: 160px;
+                left: initial;
+                animation-delay: 2.5s;
+                animation-duration: 6s;
+                width: 4px;
+                height: 4px;
+            }
+
+            &:nth-child(3) {
+                top: 200px;
+                right: 160px;
+                left: initial;
+                animation-delay: 3s;
+                animation-duration: 7s;
+                width: 3px;
+                height: 3px;
+            }
+
+            &:nth-child(4) {
+                top: 450px;
+                left: 200px;
+                animation-delay: 4s;
+                animation-duration: 7s;
+                width: 3px;
+                height: 3px;
+            }
+        }
+    }
+
+    @include u.tablet-only {
+        background-image: linear-gradient(transparent, u.$color-background 98%), url("/src/assets/images/hero-bg.webp");
+
+        .hero__title {
+            align-self: flex-start;
+            margin-left: 40px;
+        }
+
+        .hero__text {
+            width: 500px;
+            transform: translateY(-45px);
+        }
+
+        .hero__tech-icon-container {
+            width: 70%;
+        }
+
+        .hero__star {
+            &:nth-child(1) {
+                top: 0px;
+                left: 150px;
+            }
+
+            &:nth-child(2) {
+                top: 300px;
+                right: 500px;
+            }
+
+            &:nth-child(3) {
+                right: 200px;
+            }
+
+            &:nth-child(4) {
+                top: 550px;
+                left: 250px;
+            }
+
+            &::before {
+                width: 150px;
+            }
+        }
+    }
+
+    @include u.desktop-only {
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5%;
+
+            .hero__title-container {
+                .hero__title {
+                    font-size: 3.2rem;
+                }
+            }
+
+            .contact__button-container {
+                margin-top: 0;
+            }
+        }
+
+        .hero__text {
+            width: 600px;
+            font-size: 1.5rem;
+            z-index: 2;
+            background-color: u.$color-background;
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-shadow: 0 0 0.3em currentColor;
+            position: relative;
+            transform-style: preserve-3d;
+            transform:
+                perspective(5000px)
+                rotateY(var(--rotateY))
+                rotateX(var(--rotateX));
+
+            &::before {
+                content: "";
+                position: absolute;
+                border-radius: inherit;
+                inset: 0.75rem;
+                background-color: black;
+                transform: translateZ(-49px);
+                filter: blur(15px);
+                opacity: 0.5;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-radius: inherit;
+                inset: -1rem;
+                background: linear-gradient(-45deg, rgb(3, 150, 150), rgb(156, 7, 156));
+                transform: translateZ(-50px);
+            }
+        }
+
+        .hero__tech-icon-container {
+            width: 35%;
+        }
+
+        .hero__star {
+            animation: animate-stars-desktop 5s linear infinite;
+
+            &:nth-child(1) {
+                left: 300px;
+            }
+
+            &:nth-child(2) {
+                top: 500px;
+                right: 400px;
+            }
+
+            &:nth-child(3) {
+                top: 200px;
+                right: 500px;
+            }
+
+            &:nth-child(4) {
+                top: 550px;
+                right: 50%;
+            }
+
+            &::before {
+                width: 300px;
+            }
+        }
+    }
+
+    @include u.ultra-wide-only {
+        padding: 30px 0 70px;
+    }
+}

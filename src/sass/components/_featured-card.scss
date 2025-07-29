@@ -1,0 +1,160 @@
+@use "../utils" as u;
+
+.featured-card {
+    width: 85vw;
+    margin:  40px auto;
+    border-radius: 10px;
+    border: 2px solid u.$color-primary;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 79px;
+    position: relative;
+    background-color: transparent;
+    transition: all 0.5s;
+
+    @include u.tablet-only {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    &:hover {
+        box-shadow: 0 10px 20px u.$color-box-shadows;
+        border-color: u.$color-border;
+    } 
+
+    &:hover > .featured-card__modal, 
+    &:active > .featured-card__modal {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    &__modal {
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba(43, 43, 43, 0.95);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+
+        .button-primary {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__title {
+        font-size: 1.7rem;
+        margin: 10px auto 0 auto;
+        max-width: 90%;
+    }
+
+    &__origin {
+        max-width: 90%;
+        margin: 0 auto 0 auto;
+    }
+
+    &__description {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    &__tech-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__tech {
+        height: 40px;
+        margin: 7px;
+    }
+
+    &__button {
+        display: none;
+
+        @include u.desktop-only {
+            display: block;              
+        }
+    }
+
+    &__preview {
+        display: none;
+        background-color: u.$translucent-background;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+
+        &.previewActive {
+            display: flex;
+            animation: activate-preview 300ms ease-out forwards;
+        }
+
+        &.previewClosing {
+            display: flex;
+            animation: deactivate-preview 300ms ease-out forwards;
+        }
+
+        .featured-card__preview-container {
+            width: 100%;
+            height: 95%;
+            background-color: u.$color-background;
+            border-radius: 10px;
+            border: 2px solid u.$color-border;
+            box-shadow: 0 10px 20px u.$color-box-shadows;
+            display: flex;
+            flex-direction: column;
+
+            @include u.tablet-only {
+                width: 90%;                
+            }
+
+            .button__close-preview {
+                width: 50px;
+                height: 50px;
+                background-color: transparent;
+                border: none;
+                margin-left: auto;
+                font-size: 2rem;
+                color: u.$color-border;
+                transform: rotate(45deg);
+                cursor: pointer;
+            }
+
+            iframe {
+                background-color: u.$color-primary;
+                width: 100%;
+                flex-grow: 1;
+                border: none;
+                border-top: 2px solid u.$color-border;
+            }
+        }
+    }
+
+    &__external-link {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,19 @@
+@use "../utils" as u;
+
+.button-primary {
+    background-color: transparent;
+    color: u.$color-primary;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid u.$color-primary;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+
+    &:hover {
+        background-color: u.$color-primary;
+        color: black;
+    }
+}

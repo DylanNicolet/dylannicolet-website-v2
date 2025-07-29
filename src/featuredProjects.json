@@ -1,0 +1,85 @@
+{
+    "featuredProjectsData": [
+        {
+            "imageSource" : "/Images/project_screenshot/audiophile.webp",
+            "title": "Audiophile",
+            "origin": "frontendmentor.io",
+            "description": "Multi-page e-commerce website with fully interactive shopping cart functionality",
+            "techUsed": ["react", "router", "redux", "sass"],
+            "github": "https://github.com/DylanNicolet/audiophile_website_frontendmentor.io",
+            "live": "https://dylannicolet-audiophile.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/Space-Tourism.webp",
+            "title": "Space Tourism",
+            "origin": "frontendmentor.io",
+            "description": "Responsive multipage website intended to promote space tourism. It provides information on the destinations, crew members and technologies involved",
+            "techUsed": ["react", "router", "redux", "sass"],
+            "github": "https://github.com/DylanNicolet/space-tourism-frontendmentor.io",
+            "live": "https://space-tourism-dylannicolet.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/le-hangar.webp",
+            "title": "Le Hangar",
+            "origin": "Live hair salon website",
+            "description": "Single page live website created for a hair salon. It provides links and information to potential customers for this salon",
+            "techUsed": ["react", "sass"],
+            "github": "https://github.com/DylanNicolet/le-hangar-pully",
+            "live": "https://www.lehangarpully.ch/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/data-table.webp",
+            "title": "Component library",
+            "origin": "Project 14 - OpenClassrooms",
+            "description": "A custom component library built in React and hosted on NPM. Displays user data on a table with reordering functionalities",
+            "techUsed": ["react", "css", "npm"],
+            "github": "https://github.com/DylanNicolet/open-classrooms-p14-data-table-library",
+            "live": "https://www.npmjs.com/package/open-classrooms-p14-data-table-library"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/kasa.webp",
+            "title": "Kasa",
+            "origin": "Project 11 - OpenClassrooms",
+            "description": "Multipage website built in React presenting apartments and host information. Showcasing React Router with URL error handling",
+            "techUsed": ["react", "router", "sass"],
+            "github": "https://github.com/DylanNicolet/front-end-p11-openclassrooms",
+            "live": "https://kasa-dylannicolet.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/fisheye.webp",
+            "title": "Fisheye",
+            "origin": "Project 6 - OpenClassrooms",
+            "description": "Multipage website built using vanilla JavaScript to showcase photographers and their works. Includes a hashtag filtering system, like system and modal windows",
+            "techUsed": ["js", "sass", "html"],
+            "github": "https://github.com/DylanNicolet/Front-End-P6-OpenClassrooms",
+            "live": "https://fisheye-dylannicolet.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/calculator-app.webp",
+            "title": "Calculator App",
+            "origin": "frontendmentor.io",
+            "description": "A multi themed calculator app built in React",
+            "techUsed": ["react", "sass"],
+            "github": "https://github.com/DylanNicolet/Calculator_app_frontendmentor.io",
+            "live": "https://dylan-nicolet-calculator.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/tik-tak-toe.webp",
+            "title": "Tik Tac Toe game",
+            "origin": "frontendmentor.io",
+            "description": "A simple Tik Tac Toe game built in React, using pure CSS",
+            "techUsed": ["react", "css"],
+            "github": "https://github.com/DylanNicolet/tic_tac_toe",
+            "live": "https://dylannicolet-tic-tac-toe.netlify.app/"
+        },
+        {
+            "imageSource" : "/Images/project_screenshot/multi-step-form.webp",
+            "title": "Multi-step form",
+            "origin": "frontendmentor.io",
+            "description": "My first go at Vue.js and Pinia. It's a subscription form with 4 steps to register for a gaming service provider",
+            "techUsed": ["vue", "pinia", "sass"],
+            "github": "https://github.com/DylanNicolet/multi_step_form_frontendmentor.io",
+            "live": "https://dylannicolet-multi-step-form.netlify.app/"
+        }
+    ]
+}

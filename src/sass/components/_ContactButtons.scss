@@ -1,0 +1,39 @@
+@use "../utils" as u;
+
+.contact__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include u.tablet-only {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    a.contact__button {
+        width: 80%;
+        color: white;
+        background-color: transparent;
+        border-radius: 30px;
+        border: 2px solid white;
+        padding: 15px;
+        margin: 15px auto;
+        font-size: 1.1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.5s;
+    
+        &:hover {
+            color: black;
+            background-color: white;
+        }
+    
+        @include u.tablet-only {
+            width: 300px;
+            margin: 0 10px;
+        }
+    }
+}
